@@ -34,7 +34,7 @@ class PostListViewController: UITableViewController {
         return
       }
 
-      self.posts = result?.data?.posts
+      self.posts = result?.data?.posts as? [AllPostsQuery.Data.Post]
     }
   }
 

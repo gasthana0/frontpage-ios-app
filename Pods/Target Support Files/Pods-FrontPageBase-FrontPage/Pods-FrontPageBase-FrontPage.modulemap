@@ -1,0 +1,6 @@
+framework module Pods_FrontPageBase_FrontPage {
+  umbrella header "Pods-FrontPageBase-FrontPage-umbrella.h"
+
+  export *
+  module * { export * }
+}

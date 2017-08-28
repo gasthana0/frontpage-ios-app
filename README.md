@@ -6,16 +6,23 @@ This is the simple example Apollo iOS app that lives at dev.apollodata.com.
 
 This project requires Xcode 8, which you can install from the [Mac App Store](https://itunes.apple.com/en/app/xcode/id497799835?mt=12).
 
-To clone the Git repository to your local machine, including submodules:
 
-```sh
-git clone --recursive https://github.com/apollostack/frontpage-ios-app.git
-```
-
-You will also have to install the `apollo-codegen` command globally through npm:
+You will have to install the `apollo-codegen` command globally through npm:
 
 ```sh
 npm install -g apollo-codegen
+```
+
+- introspect schema
+
+```
+apollo-codegen introspect-schema http://localhost:8080/graphql --output schema.json
+```
+
+- generate api
+
+```
+apollo-codegen generate *.graphql --schema schema.json --output API.swift
 ```
 
 ### Server
